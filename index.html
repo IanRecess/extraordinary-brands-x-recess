@@ -63,65 +63,57 @@
     font-size: 22px;
     color: rgba(255,255,255,0.85);
     max-width: 760px;
-    margin-bottom: 48px;
-  }
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    padding-top: 48px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-  }
-  .stat-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 64px;
-    color: var(--eb-yellow);
-    line-height: 1;
-  }
-  .stat-label {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 11px;
-    color: rgba(255,255,255,0.7);
-    margin-top: 8px;
+    margin-bottom: 0;
   }
 
-  /* BRAND PILLS STRIP */
-  .brand-strip {
+  /* BRAND SHOWCASE GRID */
+  .brand-section {
     background: var(--eb-yellow);
     color: var(--eb-black);
-    padding: 28px 0;
+    padding: 70px 0;
   }
-  .brand-strip-inner {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    text-align: center;
+  .brand-section .section-title { color: var(--eb-black); margin-bottom: 8px; }
+  .brand-section .section-sub {
+    font-size: 17px;
+    color: var(--eb-black);
+    opacity: 0.85;
+    margin-bottom: 40px;
+    max-width: 700px;
   }
-  .brand-pill {
+  .brand-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+  .brand-card {
+    background: var(--eb-black);
+    color: white;
+    padding: 28px 20px;
+    border-radius: 10px;
+    border-top: 4px solid var(--eb-yellow);
+    transition: transform 0.2s;
+  }
+  .brand-card:hover { transform: translateY(-4px); }
+  .brand-card .modality {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--eb-yellow);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .brand-card .name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 28px;
-    letter-spacing: 1px;
-    line-height: 1;
+    line-height: 0.95;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
   }
-  .brand-pill span {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    margin-top: 6px;
-    opacity: 0.7;
-  }
-  .brand-pill .dot {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background: var(--eb-black);
-    border-radius: 50%;
-    margin: 0 12px 6px;
+  .brand-card .desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.5;
   }
 
   /* SECTIONS */
@@ -461,46 +453,51 @@
     <div class="hero-eyebrow">Extraordinary Brands × Recess</div>
     <h1>One Category. <span class="accent">Five Brands.</span> One Network-Wide Partnership.</h1>
     <p class="hero-sub">Unlock category-exclusive brand partnerships across the entire Extraordinary Brands portfolio — Row House, Neighborhood barre, CycleBar, Rumble Boxing, Basecamp Fitness — without studio-by-studio negotiation. Brands fund the activations. Studios distribute the product. EB HQ retains the package and a 20% royalty across the network.</p>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-num">5</div>
-        <div class="stat-label">Fitness Brands</div>
-      </div>
-      <div>
-        <div class="stat-num">430+</div>
-        <div class="stat-label">Studios Open Network-Wide</div>
-      </div>
-      <div>
-        <div class="stat-num">~150K</div>
-        <div class="stat-label">Active Members Reached</div>
-      </div>
-    </div>
   </div>
 </header>
 
-<!-- BRAND STRIP -->
-<div class="brand-strip">
+<!-- BRAND SHOWCASE -->
+<section class="brand-section">
   <div class="container">
-    <div class="brand-strip-inner">
-      <div class="brand-pill">Row House <span>Rowing + Strength</span></div>
-      <span class="dot"></span>
-      <div class="brand-pill">Neighborhood barre <span>Barre</span></div>
-      <span class="dot"></span>
-      <div class="brand-pill">CycleBar <span>Indoor Cycling</span></div>
-      <span class="dot"></span>
-      <div class="brand-pill">Rumble Boxing <span>Boxing Fitness</span></div>
-      <span class="dot"></span>
-      <div class="brand-pill">Basecamp Fitness <span>HIIT</span></div>
+    <div class="section-eyebrow" style="color: var(--eb-black); opacity: 0.7;">The Portfolio</div>
+    <h2 class="section-title">Five brands. Five modalities. One partnership.</h2>
+    <p class="section-sub">A single brand can lock category exclusivity across all five — reaching distinct audiences who all share the same fitness-engaged, brand-aware, repeat-purchase profile.</p>
+    <div class="brand-grid">
+      <div class="brand-card">
+        <div class="modality">Rowing + Strength</div>
+        <div class="name">Row House</div>
+        <div class="desc">Science-backed rowing meets strength training. Low-impact, full-body, built for every fitness level.</div>
+      </div>
+      <div class="brand-card">
+        <div class="modality">Barre</div>
+        <div class="name">Neighborhood barre</div>
+        <div class="desc">Precision barre with dynamic movement. 100% women-owned franchise model.</div>
+      </div>
+      <div class="brand-card">
+        <div class="modality">Indoor Cycling</div>
+        <div class="name">CycleBar</div>
+        <div class="desc">The largest indoor cycling brand. Immersive CycleTheaters, CycleBeats playlists, CycleStat metrics.</div>
+      </div>
+      <div class="brand-card">
+        <div class="modality">Boxing Fitness</div>
+        <div class="name">Rumble Boxing</div>
+        <div class="desc">10-round, 45-min boxing-inspired circuits. NYC-founded, scaling to 385+ licensed locations worldwide.</div>
+      </div>
+      <div class="brand-card">
+        <div class="modality">HIIT</div>
+        <div class="name">Basecamp Fitness</div>
+        <div class="desc">Science-backed, 35-minute high-intensity interval training. Newest addition to the EB portfolio.</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- THE OPPORTUNITY -->
 <section class="std">
   <div class="container">
     <div class="section-eyebrow">The Opportunity</div>
     <h2 class="section-title">Members love free product. Brands pay to put it in their hands. EB owns the category exclusivity.</h2>
-    <p class="section-lede">EB members are exactly who national CPG and lifestyle brands are spending media dollars to reach: a women-leaning, fitness-engaged, repeat-purchase audience across five distinct workout modalities. A single brand can lock category exclusivity across all five — driving significantly more revenue for EB than studio-by-studio activations would.</p>
+    <p class="section-lede">EB members are exactly who national CPG and lifestyle brands are spending media dollars to reach: a women-leaning, fitness-engaged, repeat-purchase audience spread across five distinct workout modalities. The breadth is the unlock — a single brand can lock category exclusivity across all five, driving significantly more value for EB than studio-by-studio activations ever could.</p>
 
     <div class="pillars">
       <div class="pillar">
@@ -618,41 +615,28 @@
       </div>
     </div>
 
-    <h3 style="font-family:'Bebas Neue',sans-serif; font-size:32px; margin: 48px 0 16px;">The Math, Run Against EB's Network</h3>
+    <h3 style="font-family:'Bebas Neue',sans-serif; font-size:32px; margin: 48px 0 16px;">The Mechanics</h3>
     <div class="math-block">
-      <div class="math-title">Per Network-Wide Sampling Activation</div>
+      <div class="math-title">How a Network-Wide Sampling Activation Pays Out</div>
       <div class="math-row">
-        <span class="label">Total EB members across portfolio</span>
-        <span class="val">~150,000</span>
+        <span class="label">Brand purchases an activation across the EB portfolio</span>
+        <span class="val">→ funded by brand</span>
       </div>
       <div class="math-row">
-        <span class="label">Estimated reach per activation (30–50% of members)</span>
-        <span class="val">45K – 75K samples</span>
+        <span class="label">Recess routes it to studios across all five brands</span>
+        <span class="val">→ no EB ops lift</span>
       </div>
       <div class="math-row">
-        <span class="label">Studio payout, blended ($0.30 avg)</span>
-        <span class="val">$13.5K – $22.5K</span>
+        <span class="label">Studios distribute samples to members</span>
+        <span class="val">→ studio earns standard payout</span>
       </div>
       <div class="math-row totalrow">
-        <span class="label">EB HQ 20% royalty per activation</span>
-        <span class="val">$2.7K – $4.5K</span>
+        <span class="label">EB HQ 20% royalty layered on every activation</span>
+        <span class="val">passive + scales</span>
       </div>
     </div>
 
-    <div class="ranges">
-      <div class="range-card">
-        <div class="lbl">Conservative · 4 Activations / yr</div>
-        <div class="num">$11K – $18K</div>
-        <div class="desc">Annual passive HQ royalty, plus $54K–$90K direct to studios</div>
-      </div>
-      <div class="range-card">
-        <div class="lbl">Higher Cadence · 8 Activations / yr</div>
-        <div class="num">$22K – $36K</div>
-        <div class="desc">Annual passive HQ royalty, plus $108K–$180K direct to studios</div>
-      </div>
-    </div>
-
-    <p style="font-size: 13px; color: var(--gray-600); text-align: center; margin-top: 16px; font-style: italic;">Stream 2 figures only. Category-exclusive national packages (Stream 1) are entirely separate revenue, priced and sold through Recess at EB-set pricing. Digital amplification add-ons layer additional revenue on every activation.</p>
+    <p style="font-size: 13px; color: var(--gray-600); text-align: center; margin-top: 16px; font-style: italic;">We'll run the actual revenue projections together on the call using EB's real network metrics. Stream 1 (category-exclusive packages) is entirely separate revenue. Digital amplification add-ons layer additional revenue on every activation.</p>
 
     <div class="callout">
       <strong>Why this matters:</strong> Studios across all five brands get a tangible, ongoing perk for members. EB HQ gets a brand-new revenue stream with zero operational burden, and category exclusivity gives EB a premium pricing lever that doesn't exist at the studio-by-studio level. The brands pay for the entire experience.
